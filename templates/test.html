@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Test - AI Study Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body oncontextmenu="return false;">
+    <div class="container">
+        <h1>Take Test</h1>
+
+        <!-- Topic input -->
+        <form method="POST">
+            <input type="text" name="topic" placeholder="Enter topic..." value="{{ topic if topic else '' }}" required>
+            <button type="submit">Load MCQs</button>
+        </form>
+
+        <!-- MCQs section -->
+        {% if mcqs %}
+        <form method="POST">
+            <input type="hidden" name="topic" value="{{ topic }}">
+            {% for mcq in mcqs %}
+                <div class="mcq">
+                    <p>{{ loop.index }}. {{ mcq.question }}</p>
+                    {% for option in mcq.options %}
+                        <label>
+                            <input type="radio" name="answers" value="{{ option }}" required> {{ option }}
+                        </label><br>
+                    {% endfor %}
+                </div>
+                <hr>
+            {% endfor %}
+            <button type="submit">Submit Test</button>
+        </form>
+        {% endif %}
+
+        <!-- Score section -->
+        {% if score is not none %}
+            <div class="score">
+                <h2>Your Score: {{ score }} / {{ mcqs|length }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

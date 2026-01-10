@@ -1,0 +1,38 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="flask-cors" />
+          <option value="openai" />
+          <option value="python-dotenv" />
+          <option value="annotated-types" />
+          <option value="anyio" />
+          <option value="blinker" />
+          <option value="certifi" />
+          <option value="click" />
+          <option value="colorama" />
+          <option value="distro" />
+          <option value="Flask" />
+          <option value="h11" />
+          <option value="httpcore" />
+          <option value="httpx" />
+          <option value="idna" />
+          <option value="itsdangerous" />
+          <option value="Jinja2" />
+          <option value="jiter" />
+          <option value="MarkupSafe" />
+          <option value="pydantic" />
+          <option value="pydantic_core" />
+          <option value="sniffio" />
+          <option value="tqdm" />
+          <option value="typing-inspection" />
+          <option value="typing_extensions" />
+          <option value="Werkzeug" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

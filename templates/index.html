@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body oncontextmenu="return false;">
+    <div class="container">
+        <h1>AI Study Assistant</h1>
+
+        <!-- Topic input form -->
+        <form method="POST">
+            <input type="text" name="topic" placeholder="Enter topic..." value="{{ topic if topic else '' }}" required>
+            <div class="buttons">
+                <button type="submit" name="action" value="study">Generate Study Content</button>
+                <button type="submit" formaction="/test" name="action" value="test">Take Test</button>
+            </div>
+        </form>
+
+        <!-- Study content result -->
+        {% if result %}
+        <div class="result">
+            <h2>Results for: {{ topic }}</h2>
+            <pre>{{ result }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
