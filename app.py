@@ -3,9 +3,9 @@ from study_assistant import generate_study_content, get_mcqs
 
 app = Flask(__name__)
 
-# -----------------------------
+
 # Home page - Study content
-# -----------------------------
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     topic = ""
@@ -21,9 +21,9 @@ def index():
         result=result
     )
 
-# -----------------------------
+
 # Take Test page
-# -----------------------------
+
 @app.route("/test", methods=["GET", "POST"])
 def take_test():
     topic = ""
@@ -46,8 +46,8 @@ def take_test():
         score=score
     )
 
-# -----------------------------
+
 # Run the app
-# -----------------------------
+
 if __name__ == "__main__":
     app.run(debug=True)
