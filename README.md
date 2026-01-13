@@ -48,13 +48,7 @@ ai-study-assistant/
 
 **Home / Study Page:**  
 
-![Study Page Screenshot](link-to-your-screenshot)  
-
-**Test Page:**  
-
-![Test Page Screenshot](link-to-your-screenshot)  
-
-> You can add your screenshots here after running the app locally.
+<img width="1919" height="877" alt="Screenshot 2026-01-11 120139" src="https://github.com/user-attachments/assets/7a290560-3934-44d6-aa26-c1868ba361aa" />
 
 ---
 
