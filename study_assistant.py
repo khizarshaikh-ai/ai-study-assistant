@@ -29,9 +29,9 @@ study_data = {
     }
 }
 
-# -------------------------------
+
 # Generate study content safely
-# -------------------------------
+
 def find_topic(user_input):
     topics = study_data.keys()
     match = get_close_matches(user_input.lower(), topics, n=1, cutoff=0.5)
